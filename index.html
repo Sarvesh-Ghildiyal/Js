@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="person"></ul>
+    
+    <script>
+    
+        // var person=[
+        //     {
+        //         name:"Sarvesh",
+        //         age:19
+        //     },
+        //     {
+        //         name:"Pratyaksh",
+        //         age:19
+        //     },
+        //     {   
+        //         name:"Adii",
+        //         age:19
+        //     }
+        // ];
+
+        // // console.log(person[0].name)
+        
+        // var output='';
+        
+        // // console.log(person.length)
+
+        // for(var i=0;i<person.length;i++){
+        //     output+='<li>'+person[i].name+'</li>';
+        // }
+
+        // document.getElementById('person').innerHTML=output;
+
+        
+        var xmlhttp = new XMLHttpRequest();
+
+        xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+           
+            var response=JSON.parse(xmlhttp.responseText);
+            console.log(response.person)   
+            person=response.person;
+            }
+            
+            var output='';
+
+            for(var i=0;i<person.length;i++){
+                output+='<li>'+person[i].name+'</li>'
+            }
+            document.getElementById('person').innerHTML=output;
+        };
+
+        xmlhttp.open("GET","people.json", true);
+        xmlhttp.send();
+
+
+
+    </script>
+</body>
+</html>
