@@ -35,10 +35,15 @@ model:A representation, modulation
 
 */
 
+var saveEl=document.getElementById("save-el")  
 function save()
 {
+    var temp=count+'-'
+    saveEl.innerText+=temp
     console.log(count)
+    count=0;
+    countEl.innerText=count; 
 }
-function hello(){
-    
-}
+
+
+

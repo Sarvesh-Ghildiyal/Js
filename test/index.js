@@ -12,3 +12,8 @@ for(i=0;i<3;i++){
 }
 
 console.log(lapscompleted)
+
+
+let username="hello"
+let message=" buddy how are you :)"
+console.log(username+message) 
