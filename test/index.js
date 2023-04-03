@@ -17,3 +17,7 @@ console.log(lapscompleted)
 let username="hello"
 let message=" buddy how are you :)"
 console.log(username+message) 
+
+let text = "Hello world!";
+let result = text.slice(0, 5);
+console.log(text.slice(0, 5))

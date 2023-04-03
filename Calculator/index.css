@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(bg.jpeg);
+}
+
+.contain{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    min-height:80vh;
+}
+
+form{
+    width: 60%;
+    height: 60%;
+    border:2px solid black;
+}
